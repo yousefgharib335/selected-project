@@ -1,0 +1,164 @@
+Project paths added. Training, evaluation, and environment functions are ready.
+Fresh corrected TD3 run; validation already passed. Reward: bounded-tracking-v2. Network: scaled-inputs-zero-output-v2.
+TD3 training budget: 300000 ENVIRONMENT STEPS; up to 400 steps per episode.
+TD3 | steps 400/300000 ( 0.13%) | episode 1 (400/400 steps) | stage 1/3 | reward -202.24 | error 2.08 cm | completed | success 0
+TD3 | steps 800/300000 ( 0.27%) | episode 2 (400/400 steps) | stage 1/3 | reward -154.38 | error 1.36 cm | completed | success 0
+TD3 | steps 1200/300000 ( 0.40%) | episode 3 (400/400 steps) | stage 1/3 | reward -225.62 | error 2.67 cm | completed | success 0
+TD3 | steps 1600/300000 ( 0.53%) | episode 4 (400/400 steps) | stage 1/3 | reward -176.81 | error 1.61 cm | completed | success 0
+TD3 | steps 2000/300000 ( 0.67%) | episode 5 (400/400 steps) | stage 1/3 | reward -199.12 | error 2.23 cm | completed | success 0
+TD3 | steps 2400/300000 ( 0.80%) | episode 6 (400/400 steps) | stage 1/3 | reward -140.54 | error 1.11 cm | completed | success 1
+TD3 | steps 2800/300000 ( 0.93%) | episode 7 (400/400 steps) | stage 1/3 | reward -210.00 | error 2.31 cm | completed | success 0
+TD3 | steps 3200/300000 ( 1.07%) | episode 8 (400/400 steps) | stage 1/3 | reward -233.89 | error 3.22 cm | completed | success 0
+TD3 | steps 3600/300000 ( 1.20%) | episode 9 (400/400 steps) | stage 1/3 | reward -229.60 | error 3.28 cm | completed | success 0
+TD3 | steps 4000/300000 ( 1.33%) | episode 10 (400/400 steps) | stage 1/3 | reward -282.06 | error 6.47 cm | completed | success 0
+TD3 | steps 4400/300000 ( 1.47%) | episode 11 (400/400 steps) | stage 1/3 | reward -310.72 | error 9.45 cm | completed | success 0
+TD3 | steps 4800/300000 ( 1.60%) | episode 12 (400/400 steps) | stage 1/3 | reward -294.91 | error 7.95 cm | completed | success 0
+TD3 | steps 5200/300000 ( 1.73%) | episode 13 (400/400 steps) | stage 1/3 | reward -324.63 | error 13.94 cm | completed | success 0
+TD3 | steps 5600/300000 ( 1.87%) | episode 14 (400/400 steps) | stage 1/3 | reward -343.08 | error 21.15 cm | completed | success 0
+TD3 | steps 6000/300000 ( 2.00%) | episode 15 (400/400 steps) | stage 1/3 | reward -350.28 | error 29.57 cm | completed | success 0
+TD3 | steps 6400/300000 ( 2.13%) | episode 16 (400/400 steps) | stage 1/3 | reward -353.84 | error 31.46 cm | completed | success 0
+TD3 | steps 6800/300000 ( 2.27%) | episode 17 (400/400 steps) | stage 1/3 | reward -350.88 | error 29.70 cm | completed | success 0
+TD3 | steps 7200/300000 ( 2.40%) | episode 18 (400/400 steps) | stage 1/3 | reward -350.81 | error 27.13 cm | completed | success 0
+TD3 | steps 7600/300000 ( 2.53%) | episode 19 (400/400 steps) | stage 1/3 | reward -348.60 | error 24.14 cm | completed | success 0
+TD3 | steps 8000/300000 ( 2.67%) | episode 20 (400/400 steps) | stage 1/3 | reward -341.83 | error 20.09 cm | completed | success 0
+TD3 | steps 8400/300000 ( 2.80%) | episode 21 (400/400 steps) | stage 1/3 | reward -343.32 | error 18.84 cm | completed | success 0
+TD3 | steps 8800/300000 ( 2.93%) | episode 22 (400/400 steps) | stage 1/3 | reward -334.66 | error 17.82 cm | completed | success 0
+TD3 | steps 9200/300000 ( 3.07%) | episode 23 (400/400 steps) | stage 1/3 | reward -335.61 | error 16.68 cm | completed | success 0
+TD3 | steps 9600/300000 ( 3.20%) | episode 24 (400/400 steps) | stage 1/3 | reward -335.54 | error 17.01 cm | completed | success 0
+TD3 | steps 9989/300000 ( 3.33%) | episode 25 (389/400 steps) | stage 1/3 | reward -472.40 | error 14.50 cm | self-collision | success 0
+TD3 | steps 10389/300000 ( 3.46%) | episode 26 (400/400 steps) | stage 1/3 | reward -288.45 | error 8.46 cm | completed | success 0
+TD3 | steps 10789/300000 ( 3.60%) | episode 27 (400/400 steps) | stage 1/3 | reward -328.76 | error 20.80 cm | completed | success 0
+TD3 | steps 11189/300000 ( 3.73%) | episode 28 (400/400 steps) | stage 1/3 | reward -353.91 | error 46.72 cm | completed | success 0
+TD3 | steps 11490/300000 ( 3.83%) | episode 29 (301/400 steps) | stage 1/3 | reward -424.97 | error 62.82 cm | joint-limit-violation | success 0
+TD3 | steps 11790/300000 ( 3.93%) | episode 30 (300/400 steps) | stage 1/3 | reward -421.77 | error 49.51 cm | joint-limit-violation | success 0
+TD3 | steps 12095/300000 ( 4.03%) | episode 31 (305/400 steps) | stage 1/3 | reward -432.16 | error 59.77 cm | joint-limit-violation | success 0
+TD3 | steps 12456/300000 ( 4.15%) | episode 32 (361/400 steps) | stage 1/3 | reward -473.92 | error 28.30 cm | joint-limit-violation | success 0
+TD3 | steps 12856/300000 ( 4.29%) | episode 33 (400/400 steps) | stage 1/3 | reward -362.60 | error 40.66 cm | completed | success 0
+TD3 | steps 13256/300000 ( 4.42%) | episode 34 (400/400 steps) | stage 1/3 | reward -365.55 | error 40.68 cm | completed | success 0
+TD3 | steps 13653/300000 ( 4.55%) | episode 35 (397/400 steps) | stage 1/3 | reward -507.00 | error 33.42 cm | joint-limit-violation | success 0
+TD3 | steps 14033/300000 ( 4.68%) | episode 36 (380/400 steps) | stage 1/3 | reward -481.61 | error 20.79 cm | joint-limit-violation | success 0
+TD3 | steps 14417/300000 ( 4.81%) | episode 37 (384/400 steps) | stage 1/3 | reward -474.11 | error 14.29 cm | joint-limit-violation | success 0
+TD3 | steps 14610/300000 ( 4.87%) | episode 38 (193/400 steps) | stage 1/3 | reward -315.42 | error 23.52 cm | joint-limit-violation | success 0
+TD3 | steps 14686/300000 ( 4.90%) | episode 39 (76/400 steps) | stage 1/3 | reward -211.84 | error 15.18 cm | self-collision | success 0
+TD3 | steps 14771/300000 ( 4.92%) | episode 40 (85/400 steps) | stage 1/3 | reward -222.72 | error 19.44 cm | joint-limit-violation | success 0
+TD3 | steps 14852/300000 ( 4.95%) | episode 41 (81/400 steps) | stage 1/3 | reward -219.93 | error 20.86 cm | joint-limit-violation | success 0
+TD3 | steps 14945/300000 ( 4.98%) | episode 42 (93/400 steps) | stage 1/3 | reward -231.76 | error 23.85 cm | joint-limit-violation | success 0
+TD3 | steps 15038/300000 ( 5.01%) | episode 43 (93/400 steps) | stage 1/3 | reward -230.31 | error 21.52 cm | joint-limit-violation | success 0
+TD3 | steps 15271/300000 ( 5.09%) | episode 44 (233/400 steps) | stage 1/3 | reward -357.75 | error 24.24 cm | joint-limit-violation | success 0
+TD3 | steps 15505/300000 ( 5.17%) | episode 45 (234/400 steps) | stage 1/3 | reward -356.64 | error 24.47 cm | joint-limit-violation | success 0
+TD3 | steps 15728/300000 ( 5.24%) | episode 46 (223/400 steps) | stage 1/3 | reward -348.62 | error 27.90 cm | joint-limit-violation | success 0
+TD3 | steps 15986/300000 ( 5.33%) | episode 47 (258/400 steps) | stage 1/3 | reward -389.70 | error 44.23 cm | joint-limit-violation | success 0
+TD3 | steps 16207/300000 ( 5.40%) | episode 48 (221/400 steps) | stage 1/3 | reward -351.62 | error 32.20 cm | self-collision | success 0
+TD3 | steps 16330/300000 ( 5.44%) | episode 49 (123/400 steps) | stage 1/3 | reward -254.13 | error 16.18 cm | self-collision | success 0
+TD3 | steps 16442/300000 ( 5.48%) | episode 50 (112/400 steps) | stage 1/3 | reward -244.01 | error 15.54 cm | self-collision | success 0
+TD3 | steps 16545/300000 ( 5.51%) | episode 51 (103/400 steps) | stage 1/3 | reward -229.11 | error 9.16 cm | self-collision | success 0
+TD3 | steps 16650/300000 ( 5.55%) | episode 52 (105/400 steps) | stage 1/3 | reward -223.26 | error 5.16 cm | self-collision | success 0
+TD3 | steps 16775/300000 ( 5.59%) | episode 53 (125/400 steps) | stage 1/3 | reward -245.72 | error 7.55 cm | self-collision | success 0
+TD3 | steps 16930/300000 ( 5.64%) | episode 54 (155/400 steps) | stage 1/3 | reward -260.05 | error 5.62 cm | self-collision | success 0
+TD3 | steps 17088/300000 ( 5.70%) | episode 55 (158/400 steps) | stage 1/3 | reward -264.50 | error 6.72 cm | self-collision | success 0
+TD3 | steps 17224/300000 ( 5.74%) | episode 56 (136/400 steps) | stage 1/3 | reward -260.46 | error 12.89 cm | self-collision | success 0
+TD3 | steps 17348/300000 ( 5.78%) | episode 57 (124/400 steps) | stage 1/3 | reward -259.21 | error 30.15 cm | self-collision | success 0
+TD3 | steps 17478/300000 ( 5.83%) | episode 58 (130/400 steps) | stage 1/3 | reward -266.55 | error 36.56 cm | self-collision | success 0
+TD3 | steps 17612/300000 ( 5.87%) | episode 59 (134/400 steps) | stage 1/3 | reward -269.86 | error 37.85 cm | self-collision | success 0
+TD3 | steps 17745/300000 ( 5.92%) | episode 60 (133/400 steps) | stage 1/3 | reward -270.52 | error 39.50 cm | self-collision | success 0
+TD3 | steps 17892/300000 ( 5.96%) | episode 61 (147/400 steps) | stage 1/3 | reward -286.14 | error 51.86 cm | joint-limit-violation | success 0
+TD3 | steps 18019/300000 ( 6.01%) | episode 62 (127/400 steps) | stage 1/3 | reward -266.29 | error 47.04 cm | joint-limit-violation | success 0
+TD3 | steps 18152/300000 ( 6.05%) | episode 63 (133/400 steps) | stage 1/3 | reward -271.94 | error 45.72 cm | joint-limit-violation | success 0
+TD3 | steps 18355/300000 ( 6.12%) | episode 64 (203/400 steps) | stage 1/3 | reward -339.95 | error 53.01 cm | joint-limit-violation | success 0
+TD3 | steps 18588/300000 ( 6.20%) | episode 65 (233/400 steps) | stage 1/3 | reward -364.34 | error 41.06 cm | joint-limit-violation | success 0
+TD3 | steps 18813/300000 ( 6.27%) | episode 66 (225/400 steps) | stage 1/3 | reward -356.97 | error 37.82 cm | joint-limit-violation | success 0
+TD3 | steps 19042/300000 ( 6.35%) | episode 67 (229/400 steps) | stage 1/3 | reward -359.98 | error 38.37 cm | joint-limit-violation | success 0
+TD3 | steps 19289/300000 ( 6.43%) | episode 68 (247/400 steps) | stage 1/3 | reward -368.28 | error 23.98 cm | joint-limit-violation | success 0
+TD3 | steps 19544/300000 ( 6.51%) | episode 69 (255/400 steps) | stage 1/3 | reward -380.37 | error 30.58 cm | joint-limit-violation | success 0
+TD3 | steps 19801/300000 ( 6.60%) | episode 70 (257/400 steps) | stage 1/3 | reward -381.85 | error 27.58 cm | joint-limit-violation | success 0
+TD3 | steps 20076/300000 ( 6.69%) | episode 71 (275/400 steps) | stage 1/3 | reward -397.13 | error 24.08 cm | joint-limit-violation | success 0
+TD3 | steps 20374/300000 ( 6.79%) | episode 72 (298/400 steps) | stage 1/3 | reward -418.10 | error 27.04 cm | joint-limit-violation | success 0
+TD3 | steps 20734/300000 ( 6.91%) | episode 73 (360/400 steps) | stage 1/3 | reward -459.36 | error 22.41 cm | joint-limit-violation | success 0
+TD3 | steps 21028/300000 ( 7.01%) | episode 74 (294/400 steps) | stage 1/3 | reward -412.38 | error 27.96 cm | joint-limit-violation | success 0
+TD3 | steps 21335/300000 ( 7.11%) | episode 75 (307/400 steps) | stage 1/3 | reward -428.49 | error 32.19 cm | joint-limit-violation | success 0
+TD3 | steps 21657/300000 ( 7.22%) | episode 76 (322/400 steps) | stage 1/3 | reward -439.06 | error 33.85 cm | joint-limit-violation | success 0
+TD3 | steps 22054/300000 ( 7.35%) | episode 77 (397/400 steps) | stage 1/3 | reward -507.33 | error 32.24 cm | joint-limit-violation | success 0
+TD3 | steps 22385/300000 ( 7.46%) | episode 78 (331/400 steps) | stage 1/3 | reward -446.27 | error 35.90 cm | joint-limit-violation | success 0
+TD3 | steps 22688/300000 ( 7.56%) | episode 79 (303/400 steps) | stage 1/3 | reward -407.74 | error 32.03 cm | joint-limit-violation | success 0
+TD3 | steps 22983/300000 ( 7.66%) | episode 80 (295/400 steps) | stage 1/3 | reward -415.83 | error 38.09 cm | joint-limit-violation | success 0
+TD3 | steps 23165/300000 ( 7.72%) | episode 81 (182/400 steps) | stage 1/3 | reward -282.70 | error 6.47 cm | joint-limit-violation | success 0
+TD3 | steps 23565/300000 ( 7.86%) | episode 82 (400/400 steps) | stage 1/3 | reward -350.99 | error 32.42 cm | completed | success 0
+TD3 | steps 23734/300000 ( 7.91%) | episode 83 (169/400 steps) | stage 1/3 | reward -289.10 | error 11.33 cm | joint-limit-violation | success 0
+TD3 | steps 23889/300000 ( 7.96%) | episode 84 (155/400 steps) | stage 1/3 | reward -274.82 | error 10.76 cm | joint-limit-violation | success 0
+TD3 | steps 23987/300000 ( 8.00%) | episode 85 (98/400 steps) | stage 1/3 | reward -221.81 | error 6.66 cm | joint-limit-violation | success 0
+TD3 | steps 24109/300000 ( 8.04%) | episode 86 (122/400 steps) | stage 1/3 | reward -248.83 | error 11.50 cm | joint-limit-violation | success 0
+TD3 | steps 24237/300000 ( 8.08%) | episode 87 (128/400 steps) | stage 1/3 | reward -253.75 | error 11.48 cm | joint-limit-violation | success 0
+TD3 | steps 24478/300000 ( 8.16%) | episode 88 (241/400 steps) | stage 1/3 | reward -348.88 | error 10.50 cm | joint-limit-violation | success 0
+TD3 | steps 24722/300000 ( 8.24%) | episode 89 (244/400 steps) | stage 1/3 | reward -348.48 | error 9.64 cm | joint-limit-violation | success 0
+TD3 | steps 24983/300000 ( 8.33%) | episode 90 (261/400 steps) | stage 1/3 | reward -369.01 | error 12.79 cm | joint-limit-violation | success 0
+TD3 | steps 25205/300000 ( 8.40%) | episode 91 (222/400 steps) | stage 1/3 | reward -339.06 | error 13.49 cm | joint-limit-violation | success 0
+TD3 | steps 25448/300000 ( 8.48%) | episode 92 (243/400 steps) | stage 1/3 | reward -363.48 | error 18.39 cm | joint-limit-violation | success 0
+TD3 | steps 25672/300000 ( 8.56%) | episode 93 (224/400 steps) | stage 1/3 | reward -348.79 | error 24.14 cm | self-collision | success 0
+TD3 | steps 25963/300000 ( 8.65%) | episode 94 (291/400 steps) | stage 1/3 | reward -416.51 | error 35.86 cm | joint-limit-violation | success 0
+TD3 | steps 26254/300000 ( 8.75%) | episode 95 (291/400 steps) | stage 1/3 | reward -417.29 | error 38.94 cm | joint-limit-violation | success 0
+TD3 | steps 26536/300000 ( 8.85%) | episode 96 (282/400 steps) | stage 1/3 | reward -404.72 | error 36.30 cm | joint-limit-violation | success 0
+TD3 | steps 26828/300000 ( 8.94%) | episode 97 (292/400 steps) | stage 1/3 | reward -415.16 | error 37.90 cm | joint-limit-violation | success 0
+TD3 | steps 27111/300000 ( 9.04%) | episode 98 (283/400 steps) | stage 1/3 | reward -409.44 | error 36.30 cm | joint-limit-violation | success 0
+TD3 | steps 27398/300000 ( 9.13%) | episode 99 (287/400 steps) | stage 1/3 | reward -414.35 | error 40.81 cm | joint-limit-violation | success 0
+TD3 | steps 27702/300000 ( 9.23%) | episode 100 (304/400 steps) | stage 1/3 | reward -428.99 | error 40.29 cm | joint-limit-violation | success 0
+TD3 | steps 28013/300000 ( 9.34%) | episode 101 (311/400 steps) | stage 1/3 | reward -435.56 | error 36.27 cm | joint-limit-violation | success 0
+TD3 | steps 28329/300000 ( 9.44%) | episode 102 (316/400 steps) | stage 1/3 | reward -437.97 | error 35.56 cm | joint-limit-violation | success 0
+TD3 | steps 28637/300000 ( 9.55%) | episode 103 (308/400 steps) | stage 1/3 | reward -431.30 | error 34.54 cm | joint-limit-violation | success 0
+TD3 | steps 28959/300000 ( 9.65%) | episode 104 (322/400 steps) | stage 1/3 | reward -444.89 | error 37.85 cm | joint-limit-violation | success 0
+TD3 | steps 29308/300000 ( 9.77%) | episode 105 (349/400 steps) | stage 1/3 | reward -469.14 | error 32.79 cm | joint-limit-violation | success 0
+TD3 | steps 29670/300000 ( 9.89%) | episode 106 (362/400 steps) | stage 1/3 | reward -478.20 | error 31.09 cm | joint-limit-violation | success 0
+TD3 | steps 30028/300000 (10.01%) | episode 107 (358/400 steps) | stage 1/3 | reward -474.65 | error 31.93 cm | joint-limit-violation | success 0
+TD3 | steps 30425/300000 (10.14%) | episode 108 (397/400 steps) | stage 1/3 | reward -511.54 | error 31.51 cm | joint-limit-violation | success 0
+TD3 | steps 30825/300000 (10.28%) | episode 109 (400/400 steps) | stage 1/3 | reward -368.93 | error 26.97 cm | completed | success 0
+TD3 | steps 31225/300000 (10.41%) | episode 110 (400/400 steps) | stage 1/3 | reward -365.14 | error 27.02 cm | completed | success 0
+TD3 | steps 31625/300000 (10.54%) | episode 111 (400/400 steps) | stage 1/3 | reward -370.28 | error 28.63 cm | completed | success 0
+TD3 | steps 32025/300000 (10.68%) | episode 112 (400/400 steps) | stage 1/3 | reward -368.32 | error 26.18 cm | completed | success 0
+TD3 | steps 32425/300000 (10.81%) | episode 113 (400/400 steps) | stage 1/3 | reward -377.42 | error 38.96 cm | completed | success 0
+TD3 | steps 32825/300000 (10.94%) | episode 114 (400/400 steps) | stage 1/3 | reward -367.06 | error 30.16 cm | completed | success 0
+TD3 | steps 33225/300000 (11.07%) | episode 115 (400/400 steps) | stage 1/3 | reward -364.90 | error 25.40 cm | completed | success 0
+TD3 | steps 33625/300000 (11.21%) | episode 116 (400/400 steps) | stage 1/3 | reward -370.69 | error 32.59 cm | completed | success 0
+TD3 | steps 34025/300000 (11.34%) | episode 117 (400/400 steps) | stage 1/3 | reward -309.79 | error 12.89 cm | completed | success 0
+TD3 | steps 34425/300000 (11.47%) | episode 118 (400/400 steps) | stage 1/3 | reward -317.84 | error 15.59 cm | completed | success 0
+TD3 | steps 34825/300000 (11.61%) | episode 119 (400/400 steps) | stage 1/3 | reward -332.97 | error 18.42 cm | completed | success 0
+TD3 | steps 35225/300000 (11.74%) | episode 120 (400/400 steps) | stage 1/3 | reward -337.35 | error 18.44 cm | completed | success 0
+TD3 | steps 35625/300000 (11.88%) | episode 121 (400/400 steps) | stage 1/3 | reward -335.77 | error 17.98 cm | completed | success 0
+TD3 | steps 36025/300000 (12.01%) | episode 122 (400/400 steps) | stage 1/3 | reward -332.79 | error 15.36 cm | completed | success 0
+TD3 | steps 36425/300000 (12.14%) | episode 123 (400/400 steps) | stage 1/3 | reward -320.36 | error 11.37 cm | completed | success 0
+TD3 | steps 36825/300000 (12.28%) | episode 124 (400/400 steps) | stage 1/3 | reward -335.35 | error 16.28 cm | completed | success 0
+TD3 | steps 37225/300000 (12.41%) | episode 125 (400/400 steps) | stage 1/3 | reward -334.12 | error 15.33 cm | completed | success 0
+TD3 | steps 37625/300000 (12.54%) | episode 126 (400/400 steps) | stage 1/3 | reward -335.25 | error 13.09 cm | completed | success 0
+TD3 | steps 38025/300000 (12.68%) | episode 127 (400/400 steps) | stage 1/3 | reward -344.73 | error 16.92 cm | completed | success 0
+TD3 | steps 38425/300000 (12.81%) | episode 128 (400/400 steps) | stage 1/3 | reward -325.38 | error 10.10 cm | completed | success 0
+TD3 | steps 38825/300000 (12.94%) | episode 129 (400/400 steps) | stage 1/3 | reward -327.24 | error 10.71 cm | completed | success 0
+TD3 | steps 39140/300000 (13.05%) | episode 130 (315/400 steps) | stage 1/3 | reward -404.63 | error 9.17 cm | joint-limit-violation | success 0
+TD3 | steps 39540/300000 (13.18%) | episode 131 (400/400 steps) | stage 1/3 | reward -334.17 | error 12.08 cm | completed | success 0
+TD3 | steps 39940/300000 (13.31%) | episode 132 (400/400 steps) | stage 1/3 | reward -327.52 | error 11.48 cm | completed | success 0
+TD3 | steps 40229/300000 (13.41%) | episode 133 (289/400 steps) | stage 1/3 | reward -377.00 | error 7.81 cm | joint-limit-violation | success 0
+TD3 | steps 40498/300000 (13.50%) | episode 134 (269/400 steps) | stage 1/3 | reward -364.22 | error 8.41 cm | joint-limit-violation | success 0
+TD3 | steps 40803/300000 (13.60%) | episode 135 (305/400 steps) | stage 1/3 | reward -400.81 | error 9.92 cm | joint-limit-violation | success 0
+TD3 | steps 41203/300000 (13.73%) | episode 136 (400/400 steps) | stage 1/3 | reward -309.00 | error 8.07 cm | completed | success 0
+TD3 | steps 41603/300000 (13.87%) | episode 137 (400/400 steps) | stage 1/3 | reward -326.34 | error 11.01 cm | completed | success 0
+TD3 | steps 42003/300000 (14.00%) | episode 138 (400/400 steps) | stage 1/3 | reward -317.27 | error 9.22 cm | completed | success 0
+TD3 | steps 42403/300000 (14.13%) | episode 139 (400/400 steps) | stage 1/3 | reward -326.61 | error 12.57 cm | completed | success 0
+TD3 | steps 42693/300000 (14.23%) | episode 140 (290/400 steps) | stage 1/3 | reward -414.80 | error 31.40 cm | joint-limit-violation | success 0
+TD3 | steps 43027/300000 (14.34%) | episode 141 (334/400 steps) | stage 1/3 | reward -445.94 | error 22.94 cm | joint-limit-violation | success 0
+TD3 | steps 43427/300000 (14.48%) | episode 142 (400/400 steps) | stage 1/3 | reward -359.17 | error 20.74 cm | completed | success 0
+TD3 | steps 43724/300000 (14.57%) | episode 143 (297/400 steps) | stage 1/3 | reward -421.66 | error 35.84 cm | joint-limit-violation | success 0
+TD3 | steps 43915/300000 (14.64%) | episode 144 (191/400 steps) | stage 1/3 | reward -321.87 | error 31.74 cm | self-collision | success 0
+TD3 | steps 44209/300000 (14.74%) | episode 145 (294/400 steps) | stage 1/3 | reward -421.58 | error 39.32 cm | joint-limit-violation | success 0
+TD3 | steps 44376/300000 (14.79%) | episode 146 (167/400 steps) | stage 1/3 | reward -298.63 | error 29.00 cm | self-collision | success 0
+TD3 | steps 44567/300000 (14.86%) | episode 147 (191/400 steps) | stage 1/3 | reward -324.30 | error 37.13 cm | self-collision | success 0
+TD3 | steps 44770/300000 (14.92%) | episode 148 (203/400 steps) | stage 1/3 | reward -335.18 | error 33.14 cm | self-collision | success 0
+TD3 | steps 45086/300000 (15.03%) | episode 149 (316/400 steps) | stage 1/3 | reward -445.32 | error 45.59 cm | joint-limit-violation | success 0
+TD3 | steps 45304/300000 (15.10%) | episode 150 (218/400 steps) | stage 1/3 | reward -350.63 | error 41.48 cm | self-collision | success 0
+TD3 | steps 45644/300000 (15.21%) | episode 151 (340/400 steps) | stage 1/3 | reward -463.77 | error 35.71 cm | joint-limit-violation | success 0
+TD3 | steps 45953/300000 (15.32%) | episode 152 (309/400 steps) | stage 1/3 | reward -437.43 | error 44.68 cm | joint-limit-violation | success 0
+TD3 | steps 46256/300000 (15.42%) | episode 153 (303/400 steps) | stage 1/3 | reward -422.88 | error 24.84 cm | joint-limit-violation | success 0
+TD3 | steps 46571/300000 (15.52%) | episode 154 (315/400 steps) | stage 1/3 | reward -444.87 | error 47.55 cm | joint-limit-violation | success 0
+TD3 | steps 46874/300000 (15.62%) | episode 155 (303/400 steps) | stage 1/3 | reward -433.16 | error 45.81 cm | joint-limit-violation | success 0
+TD3 | steps 47221/300000 (15.74%) | episode 156 (347/400 steps) | stage 1/3 | reward -474.65 | error 44.75 cm | joint-limit-violation | success 0
+TD3 | steps 47535/300000 (15.85%) | episode 157 (314/400 steps) | stage 1/3 | reward -442.35 | error 42.37 cm | joint-limit-violation | success 0
+TD3 | steps 47903/300000 (15.97%) | episode 158 (368/400 steps) | stage 1/3 | reward -492.27 | error 50.52 cm | joint-limit-violation | success 0
+TD3 | steps 48268/300000 (16.09%) | episode 159 (365/400 steps) | stage 1/3 | reward -489.29 | error 46.52 cm | joint-limit-violation | success 0
+TD3 | steps 48668/300000 (16.22%) | episode 160 (400/400 steps) | stage 1/3 | reward -367.79 | error 32.25 cm | completed | success 0
+TD3 | steps 48963/300000 (16.32%) | episode 161 (295/400 steps) | stage 1/3 | reward -421.14 | error 46.28 cm | joint-limit-violation | success 0

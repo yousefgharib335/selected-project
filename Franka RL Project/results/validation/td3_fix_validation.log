@@ -1,0 +1,121 @@
+Project paths added. Training, evaluation, and environment functions are ready.
+Running TestMovingTargetTrackingEnv
+..........
+Done TestMovingTargetTrackingEnv
+__________
+
+Running TestProjectWorkflow
+Project paths added. Training, evaluation, and environment functions are ready.
+.TD3 training budget: 6 ENVIRONMENT STEPS; up to 400 steps per episode.
+TD3 | steps 6/6 (100.00%) | episode 1 (6/400 steps) | stage 1/3 | reward -2.28 | error 1.26 cm | training-step-budget-reached | success 0
+DDPG training budget: 6 ENVIRONMENT STEPS; up to 400 steps per episode.
+DDPG | steps 6/6 (100.00%) | episode 1 (6/400 steps) | stage 1/3 | reward -2.97 | error 1.99 cm | training-step-budget-reached | success 0
+.
+================================================================================
+Verification failed in TestProjectWorkflow/initialActorsDoNotIntroduceLargeJointDrift.
+    ---------------------
+    Framework Diagnostic:
+    ---------------------
+    verifyEqual failed.
+    --> Classes do not match.
+        
+        Actual Class:
+            single
+        Expected Class:
+            double
+    
+    Actual Value:
+      7×1 single column vector
+    
+         0
+         0
+         0
+         0
+         0
+         0
+         0
+    Expected Value:
+         0
+         0
+         0
+         0
+         0
+         0
+         0
+    ------------------
+    Stack Information:
+    ------------------
+    In D:\university new\Selected Topics in Robotics and Artificial intelligence\project\Franka RL Project\tests\TestProjectWorkflow.m (TestProjectWorkflow.initialActorsDoNotIntroduceLargeJointDrift) at 62
+================================================================================
+
+================================================================================
+Verification failed in TestProjectWorkflow/initialActorsDoNotIntroduceLargeJointDrift.
+    ---------------------
+    Framework Diagnostic:
+    ---------------------
+    verifyEqual failed.
+    --> Classes do not match.
+        
+        Actual Class:
+            single
+        Expected Class:
+            double
+    
+    Actual Value:
+      7×1 single column vector
+    
+         0
+         0
+         0
+         0
+         0
+         0
+         0
+    Expected Value:
+         0
+         0
+         0
+         0
+         0
+         0
+         0
+    ------------------
+    Stack Information:
+    ------------------
+    In D:\university new\Selected Topics in Robotics and Artificial intelligence\project\Franka RL Project\tests\TestProjectWorkflow.m (TestProjectWorkflow.initialActorsDoNotIntroduceLargeJointDrift) at 62
+================================================================================
+.....    Controller    SuccessRate    Mean_FinalWindowMeanError_M    JointLimitViolations    CollisionViolations
+    __________    ___________    ___________________________    ____________________    ___________________
+
+      "TD3"            1                   0.014485                      0                       0         
+      "DDPG"           1                   0.014485                      0                       0         
+      "IK"             1                  0.0028351                      0                       0         
+
+Better RL agent by success then tracking accuracy: TD3
+    Controller    SuccessRate    Mean_FinalWindowMeanError_M    JointLimitViolations    CollisionViolations
+    __________    ___________    ___________________________    ____________________    ___________________
+
+      "TD3"            1                   0.014485                      0                       0         
+      "DDPG"           1                   0.014485                      0                       0         
+      "IK"             1                  0.0028351                      0                       0         
+
+Better RL agent by success then tracking accuracy: TD3
+.
+Done TestProjectWorkflow
+__________
+
+Failure Summary:
+
+     Name                                                            Failed  Incomplete  Reason(s)
+    =============================================================================================================
+     TestProjectWorkflow/initialActorsDoNotIntroduceLargeJointDrift    X                 Failed by verification.
+{Error using assert
+At least one test failed in the test session.
+
+Error in matlab.unittest.internal.BaseTestResult/assertSuccess (line 126)
+             assert(~any([resultArray.Failed]),message('MATLAB:unittest:TestResult:UnsuccessfulRun'));
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error in validateProject (line 10)
+assertSuccess(results);
+^^^^^^^^^^^^^^^^^^^^^^
+} 

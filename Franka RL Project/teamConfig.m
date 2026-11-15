@@ -1,0 +1,47 @@
+function cfg = teamConfig()
+% Fixed starter settings and choices shared by every controller.
+cfg.task = "moving";
+cfg.dt = 0.05;
+cfg.maxSteps = 400;
+cfg.maxIncrement = 0.01;
+cfg.box = [0.30 0.65; -0.30 0.30; 0.15 0.60];
+cfg.posTol = 0.02;
+cfg.oriTolDeg = 10; % Not applicable to moving-target tracking.
+cfg.dwellSteps = 0; % No dwell requirement for this task.
+cfg.finalWindowSteps = round(5 / cfg.dt);
+cfg.budgetSteps = 300000;
+cfg.numEvalCases = 30;
+cfg.trainSeed = 2029;
+cfg.evalSeed = 918273645; % Reserved for final evaluation only.
+cfg.validationSeed = 6029;
+cfg.maxTargetSpeed = 0.01;
+cfg.hiddenUnits = 128;
+cfg.numLayers = 2;
+cfg.trackingRewardScale = 1 / cfg.posTol;
+cfg.progressRewardWeight = 20;
+cfg.discountFactor = 0.95;
+cfg.failurePenalty = 250;
+cfg.rewardVersion = "bounded-progress-short-horizon-v3";
+cfg.networkVersion = "tolerance-scaled-zero-outputs-v3";
+cfg.explorationStd = 0.001;
+cfg.explorationStdMin = 0.0002;
+% Explicit optimizer/update controls; calibration overrides these independently.
+cfg.learningFrequency = 1;
+cfg.maxMiniBatchPerEpoch = 1;
+cfg.miniBatchSize = 256;
+cfg.warmStartSteps = 3000;
+cfg.actorLearnRate = 1e-5;
+cfg.criticLearnRate = 3e-4;
+cfg.gradientThreshold = 1;
+cfg.td3PolicyUpdateFrequency = 10;
+cfg.checkpointIntervalSteps = 5000;
+cfg.criticInitialValue = 0;
+cfg.relativePositionNormalization = cfg.posTol;
+cfg.numComputeThreads = 1; % Match the calibrated CPU execution mode.
+cfg.curriculumSpeeds = [0 0.003 0.01];
+cfg.curriculumMinSteps = [30000 60000 0];
+cfg.curriculumWindow = 20;
+cfg.curriculumSuccessRate = 0.8;
+cfg.projectRoot = fileparts(mfilename("fullpath"));
+cfg.resultsDir = fullfile(cfg.projectRoot, "results", "current");
+end

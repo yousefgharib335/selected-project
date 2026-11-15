@@ -1,0 +1,44 @@
+Project paths added. Training, evaluation, and environment functions are ready.
+DDPG training budget: 12000 ENVIRONMENT STEPS; up to 400 steps per episode.
+DDPG | steps 400/12000 ( 3.33%) | episode 1 (400/400 steps) | stage 1/3 | reward 0.03 | error 1.21 cm | completed | success 1
+DDPG | steps 800/12000 ( 6.67%) | episode 2 (400/400 steps) | stage 1/3 | reward -0.68 | error 1.66 cm | completed | success 0
+DDPG | steps 1200/12000 (10.00%) | episode 3 (400/400 steps) | stage 1/3 | reward -0.00 | error 1.28 cm | completed | success 1
+DDPG | steps 1600/12000 (13.33%) | episode 4 (400/400 steps) | stage 1/3 | reward -1.73 | error 1.60 cm | completed | success 0
+DDPG | steps 2000/12000 (16.67%) | episode 5 (400/400 steps) | stage 1/3 | reward -1.57 | error 2.41 cm | completed | success 0
+DDPG | steps 2400/12000 (20.00%) | episode 6 (400/400 steps) | stage 1/3 | reward 0.58 | error 2.13 cm | completed | success 0
+DDPG | steps 2800/12000 (23.33%) | episode 7 (400/400 steps) | stage 1/3 | reward -3.08 | error 1.42 cm | completed | success 0
+DDPG | steps 3200/12000 (26.67%) | episode 8 (400/400 steps) | stage 1/3 | reward -2.12 | error 2.30 cm | completed | success 0
+DDPG | steps 3600/12000 (30.00%) | episode 9 (400/400 steps) | stage 1/3 | reward -12.09 | error 39.16 cm | completed | success 0
+DDPG | steps 3917/12000 (32.64%) | episode 10 (317/400 steps) | stage 1/3 | reward -260.50 | error 27.17 cm | joint-limit-violation | success 0
+DDPG | steps 4317/12000 (35.98%) | episode 11 (400/400 steps) | stage 1/3 | reward -10.11 | error 12.27 cm | completed | success 0
+DDPG | steps 4717/12000 (39.31%) | episode 12 (400/400 steps) | stage 1/3 | reward -8.13 | error 6.81 cm | completed | success 0
+DDPG | steps 5117/12000 (42.64%) | episode 13 (400/400 steps) | stage 1/3 | reward -0.04 | error 2.05 cm | completed | success 1
+DDPG | steps 5517/12000 (45.98%) | episode 14 (400/400 steps) | stage 1/3 | reward 3.58 | error 0.74 cm | completed | success 1
+DDPG | steps 5917/12000 (49.31%) | episode 15 (400/400 steps) | stage 1/3 | reward 4.10 | error 0.39 cm | completed | success 1
+DDPG | steps 6317/12000 (52.64%) | episode 16 (400/400 steps) | stage 1/3 | reward -0.05 | error 1.58 cm | completed | success 1
+DDPG | steps 6717/12000 (55.98%) | episode 17 (400/400 steps) | stage 1/3 | reward 2.23 | error 1.01 cm | completed | success 1
+DDPG | steps 7117/12000 (59.31%) | episode 18 (400/400 steps) | stage 1/3 | reward 2.03 | error 0.57 cm | completed | success 1
+DDPG | steps 7517/12000 (62.64%) | episode 19 (400/400 steps) | stage 1/3 | reward 5.74 | error 0.25 cm | completed | success 1
+DDPG | steps 7917/12000 (65.97%) | episode 20 (400/400 steps) | stage 1/3 | reward 6.16 | error 0.29 cm | completed | success 1
+DDPG | steps 8317/12000 (69.31%) | episode 21 (400/400 steps) | stage 1/3 | reward 6.82 | error 0.20 cm | completed | success 1
+DDPG | steps 8717/12000 (72.64%) | episode 22 (400/400 steps) | stage 1/3 | reward 4.80 | error 0.21 cm | completed | success 1
+DDPG | steps 9117/12000 (75.97%) | episode 23 (400/400 steps) | stage 1/3 | reward 6.67 | error 0.23 cm | completed | success 1
+DDPG | steps 9517/12000 (79.31%) | episode 24 (400/400 steps) | stage 1/3 | reward 3.74 | error 0.40 cm | completed | success 1
+DDPG | steps 9917/12000 (82.64%) | episode 25 (400/400 steps) | stage 1/3 | reward 0.40 | error 0.69 cm | completed | success 1
+DDPG | steps 10226/12000 (85.22%) | episode 26 (309/400 steps) | stage 1/3 | reward -254.55 | error 0.86 cm | joint-limit-violation | success 0
+DDPG | steps 10626/12000 (88.55%) | episode 27 (400/400 steps) | stage 1/3 | reward -7.85 | error 1.82 cm | completed | success 0
+DDPG | steps 11026/12000 (91.88%) | episode 28 (400/400 steps) | stage 1/3 | reward -1.41 | error 0.99 cm | completed | success 1
+DDPG | steps 11426/12000 (95.22%) | episode 29 (400/400 steps) | stage 1/3 | reward 5.59 | error 0.22 cm | completed | success 1
+DDPG | steps 11826/12000 (98.55%) | episode 30 (400/400 steps) | stage 1/3 | reward 5.07 | error 0.20 cm | completed | success 1
+DDPG | steps 12000/12000 (100.00%) | episode 31 (174/400 steps) | stage 1/3 | reward 7.44 | error 0.21 cm | training-step-budget-reached | success 0
+Saved DDPG agent and statistics to D:\university new\Selected Topics in Robotics and Artificial intelligence\project\Franka RL Project\results\diagnostics\ddpg_v3_pilot\ddpg_agent.mat
+[Warning: DDPG did not reach the full curriculum. Report this as a training failure.] 
+[> In trainTrackingAgent (line 38)] 
+    SpeedLimit    Successes    Cases    Violations    MeanError_M    FinalWindowMeanError_M
+    __________    _________    _____    __________    ___________    ______________________
+
+          0           5          5          0          0.0016474           0.0018804       
+      0.003           5          5          0          0.0017668           0.0020308       
+       0.01           5          5          0          0.0021299           0.0027722       
+
+Calibration-only validation, not the reserved final evaluation.

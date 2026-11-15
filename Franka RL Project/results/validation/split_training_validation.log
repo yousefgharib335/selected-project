@@ -1,0 +1,9 @@
+Episode:   1/  6 | Episode reward:    -6.83 | Episode steps:    6 | Average reward:    -6.83 | Step Count:    6 | Episode Q0:     0.42
+Saved TD3 agent and statistics to D:\university new\Selected Topics in Robotics and Artificial intelligence\project\Franka RL Project\results\current\split_training_smoke\td3_agent.mat
+[Warning: TD3 did not reach the full curriculum. Report this as a training failure.] 
+[> In trainTrackingAgent (line 36)] 
+Episode:   1/  6 | Episode reward:    -3.68 | Episode steps:    6 | Average reward:    -3.68 | Step Count:    6 | Episode Q0:     0.42
+Saved DDPG agent and statistics to D:\university new\Selected Topics in Robotics and Artificial intelligence\project\Franka RL Project\results\current\split_training_smoke\ddpg_agent.mat
+[Warning: DDPG did not reach the full curriculum. Report this as a training failure.] 
+[> In trainTrackingAgent (line 36)] 
+PASS: independent TD3/DDPG runs, exact budgets, separate files, overwrite protection and code analysis.

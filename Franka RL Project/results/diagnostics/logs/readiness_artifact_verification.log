@@ -1,0 +1,4 @@
+Project paths added. Training, evaluation, and environment functions are ready.
+td3: 15/15 fresh exact-speed cases passed; worst final-window error 6.922 mm.
+ddpg: 15/15 fresh exact-speed cases passed; worst final-window error 13.407 mm.
+PASS: formal settings intact; reserved final cases absent; pilot budgets and metadata verified.

@@ -1,0 +1,6 @@
+/Franka RL Project/results/current/
+slprj/
+*.slxc
+*.asv
+.matlab_preferences/
+__pycache__/

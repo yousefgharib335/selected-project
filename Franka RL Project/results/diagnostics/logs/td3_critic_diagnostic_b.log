@@ -1,0 +1,10 @@
+Project paths added. Training, evaluation, and environment functions are ready.
+    Case      Q1         Q2       ActualDiscountedReturn    Optimism    InitialMaxAction    MeanTrackingError_M    Success
+    ____    _______    _______    ______________________    ________    ________________    ___________________    _______
+
+     1      -5.9583    -6.0757           -52.159             46.083        0.0010373             0.088784           false 
+     2      -6.5693    -6.7492           -54.466             47.717        0.0011182              0.10026           false 
+     3      -7.0043    -6.9275           -59.017             52.013        0.0011525              0.10667           false 
+     4      -6.4341    -6.6191           -56.968             50.349        0.0010051             0.093041           false 
+     5      -5.5546    -5.5882           -51.131             45.543        0.0011754             0.094314           false 
+

@@ -1,0 +1,45 @@
+Project paths added. Training, evaluation, and environment functions are ready.
+TD3 training budget: 12000 ENVIRONMENT STEPS; up to 400 steps per episode.
+TD3 | steps 400/12000 ( 3.33%) | episode 1 (400/400 steps) | stage 1/3 | reward -154.82 | error 1.82 cm | completed | success 0
+TD3 | steps 800/12000 ( 6.67%) | episode 2 (400/400 steps) | stage 1/3 | reward -156.75 | error 1.94 cm | completed | success 0
+TD3 | steps 1200/12000 (10.00%) | episode 3 (400/400 steps) | stage 1/3 | reward -176.53 | error 2.45 cm | completed | success 0
+TD3 | steps 1600/12000 (13.33%) | episode 4 (400/400 steps) | stage 1/3 | reward -147.79 | error 1.65 cm | completed | success 0
+TD3 | steps 2000/12000 (16.67%) | episode 5 (400/400 steps) | stage 1/3 | reward -192.20 | error 2.92 cm | completed | success 0
+TD3 | steps 2400/12000 (20.00%) | episode 6 (400/400 steps) | stage 1/3 | reward -173.61 | error 2.32 cm | completed | success 0
+TD3 | steps 2800/12000 (23.33%) | episode 7 (400/400 steps) | stage 1/3 | reward -146.15 | error 1.69 cm | completed | success 0
+TD3 | steps 3200/12000 (26.67%) | episode 8 (400/400 steps) | stage 1/3 | reward -178.79 | error 2.50 cm | completed | success 0
+TD3 | steps 3600/12000 (30.00%) | episode 9 (400/400 steps) | stage 1/3 | reward -117.95 | error 1.35 cm | completed | success 1
+TD3 | steps 4000/12000 (33.33%) | episode 10 (400/400 steps) | stage 1/3 | reward -133.71 | error 1.46 cm | completed | success 0
+TD3 | steps 4400/12000 (36.67%) | episode 11 (400/400 steps) | stage 1/3 | reward -180.85 | error 2.57 cm | completed | success 0
+TD3 | steps 4800/12000 (40.00%) | episode 12 (400/400 steps) | stage 1/3 | reward -225.91 | error 4.81 cm | completed | success 0
+TD3 | steps 5200/12000 (43.33%) | episode 13 (400/400 steps) | stage 1/3 | reward -161.42 | error 2.07 cm | completed | success 0
+TD3 | steps 5600/12000 (46.67%) | episode 14 (400/400 steps) | stage 1/3 | reward -178.48 | error 2.54 cm | completed | success 0
+TD3 | steps 6000/12000 (50.00%) | episode 15 (400/400 steps) | stage 1/3 | reward -230.78 | error 5.39 cm | completed | success 0
+TD3 | steps 6400/12000 (53.33%) | episode 16 (400/400 steps) | stage 1/3 | reward -221.41 | error 4.65 cm | completed | success 0
+TD3 | steps 6800/12000 (56.67%) | episode 17 (400/400 steps) | stage 1/3 | reward -241.25 | error 6.12 cm | completed | success 0
+TD3 | steps 7200/12000 (60.00%) | episode 18 (400/400 steps) | stage 1/3 | reward -216.15 | error 4.32 cm | completed | success 0
+TD3 | steps 7600/12000 (63.33%) | episode 19 (400/400 steps) | stage 1/3 | reward -235.47 | error 5.80 cm | completed | success 0
+TD3 | steps 8000/12000 (66.67%) | episode 20 (400/400 steps) | stage 1/3 | reward -220.08 | error 5.02 cm | completed | success 0
+TD3 | steps 8400/12000 (70.00%) | episode 21 (400/400 steps) | stage 1/3 | reward -230.87 | error 5.57 cm | completed | success 0
+TD3 | steps 8800/12000 (73.33%) | episode 22 (400/400 steps) | stage 1/3 | reward -221.16 | error 4.96 cm | completed | success 0
+TD3 | steps 9200/12000 (76.67%) | episode 23 (400/400 steps) | stage 1/3 | reward -256.83 | error 9.14 cm | completed | success 0
+TD3 | steps 9600/12000 (80.00%) | episode 24 (400/400 steps) | stage 1/3 | reward -269.63 | error 12.03 cm | completed | success 0
+TD3 | steps 10000/12000 (83.33%) | episode 25 (400/400 steps) | stage 1/3 | reward -262.82 | error 11.25 cm | completed | success 0
+TD3 | steps 10400/12000 (86.67%) | episode 26 (400/400 steps) | stage 1/3 | reward -280.18 | error 16.65 cm | completed | success 0
+TD3 | steps 10800/12000 (90.00%) | episode 27 (400/400 steps) | stage 1/3 | reward -285.15 | error 19.24 cm | completed | success 0
+TD3 | steps 11200/12000 (93.33%) | episode 28 (400/400 steps) | stage 1/3 | reward -288.28 | error 20.47 cm | completed | success 0
+TD3 | steps 11600/12000 (96.67%) | episode 29 (400/400 steps) | stage 1/3 | reward -286.88 | error 22.81 cm | completed | success 0
+TD3 | steps 11969/12000 (99.74%) | episode 30 (369/400 steps) | stage 1/3 | reward -517.36 | error 23.55 cm | joint-limit-violation | success 0
+TD3 | steps 12000/12000 (100.00%) | episode 31 (31/400 steps) | stage 1/3 | reward -21.62 | error 3.19 cm | training-step-budget-reached | success 0
+Saved TD3 agent and statistics to D:\university new\Selected Topics in Robotics and Artificial intelligence\project\Franka RL Project\results\diagnostics\td3_critic_prior_d\td3_agent.mat
+[Warning: TD3 did not reach the full curriculum. Report this as a training failure.] 
+[> In trainTrackingAgent (line 38)
+In calibrateTD3 (line 23)] 
+    SpeedLimit    Successes    Cases    Violations    MeanError_M    FinalWindowMeanError_M
+    __________    _________    _____    __________    ___________    ______________________
+
+          0           0          5          4           0.27598             0.41693        
+      0.003           0          5          4           0.29639             0.41553        
+       0.01           0          5          5           0.28932                 NaN        
+
+Calibration-only validation, not the reserved final evaluation.

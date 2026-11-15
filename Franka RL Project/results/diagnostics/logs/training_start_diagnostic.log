@@ -1,0 +1,16 @@
+Project paths added. Training, evaluation, and environment functions are ready.
+            Controller             Case    Steps    Success    MeanTrackingError_M    JointLimitViolation    CollisionViolation
+    ___________________________    ____    _____    _______    ___________________    ___________________    __________________
+
+    "InitialZeroActor"              1       400      true           0.017287                 false                 false       
+    "InitialZeroActor"              2       400      true           0.015372                 false                 false       
+    "InitialZeroActor"              3       400      true           0.016441                 false                 false       
+    "InitialZeroActor"              4       400      true           0.010052                 false                 false       
+    "InitialZeroActor"              5       400      true           0.018531                 false                 false       
+    "InitialZeroActorWithNoise"     1       400      false          0.016173                 false                 false       
+    "InitialZeroActorWithNoise"     2       400      false          0.019083                 false                 false       
+    "InitialZeroActorWithNoise"     3       400      false          0.023892                 false                 false       
+    "InitialZeroActorWithNoise"     4       400      true           0.010164                 false                 false       
+    "InitialZeroActorWithNoise"     5       400      false          0.020967                 false                 false       
+
+VALIDATION-ONLY initial-policy diagnostic; not learned-policy performance.

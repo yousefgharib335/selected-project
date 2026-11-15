@@ -1,0 +1,2 @@
+NumCases,EvaluationSeed,SuccessRate,MeanFinalWindowErrorM,StdFinalWindowMeanErrorM,MeanFinalWindowMaxErrorM,StdFinalWindowMaxErrorM,JointLimitViolations,CollisionViolations,MeanJointIncrementRad,MeanPerCaseMaxJointIncrementRad,MeanSumSquaredActionDifferences,MeanEpisodeReward,StdEpisodeReward
+30,4642026,0,NaN,NaN,NaN,NaN,30,0,0.0261648090242435,0.0499650550385316,0.0180318449647545,-113.464501190186,3.45852287312516

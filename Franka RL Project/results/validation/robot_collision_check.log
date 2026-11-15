@@ -1,0 +1,61 @@
+Project paths added. Training, evaluation, and environment functions are ready.
+--------------------
+Robot: (11 bodies)
+
+ Idx                Body Name                 Joint Name                 Joint Type                Parent Name(Idx)   Children Name(s)
+ ---                ---------                 ----------                 ----------                ----------------   ----------------
+   1              panda_link1               panda_joint1                   revolute                  panda_link0(0)   panda_link2(2)  
+   2              panda_link2               panda_joint2                   revolute                  panda_link1(1)   panda_link3(3)  
+   3              panda_link3               panda_joint3                   revolute                  panda_link2(2)   panda_link4(4)  
+   4              panda_link4               panda_joint4                   revolute                  panda_link3(3)   panda_link5(5)  
+   5              panda_link5               panda_joint5                   revolute                  panda_link4(4)   panda_link6(6)  
+   6              panda_link6               panda_joint6                   revolute                  panda_link5(5)   panda_link7(7)  
+   7              panda_link7               panda_joint7                   revolute                  panda_link6(6)   panda_link8(8)  
+   8              panda_link8               panda_joint8                      fixed                  panda_link7(7)   panda_hand(9)  
+   9               panda_hand           panda_hand_joint                      fixed                  panda_link8(8)   panda_leftfinger(10)  panda_rightfinger(11)  
+  10         panda_leftfinger        panda_finger_joint1                  prismatic                   panda_hand(9)   
+  11        panda_rightfinger        panda_finger_joint2                  prismatic                   panda_hand(9)   
+--------------------
+
+Model home self-collision: 1 (FK demonstration only, not a training reset).
+Task-start self-collision: 0
+  Home collision: panda_link5 <-> panda_link7
+  Home collision: panda_link5 <-> panda_hand
+  Home collision: panda_link5 <-> panda_rightfinger
+
+Home joint configuration:
+         0         0         0   -1.5708         0         0         0    0.0400    0.0400
+
+panda_hand transform:
+   -0.0000   -0.0000   -1.0000    0.3595
+    0.7071   -0.7071   -0.0000   -0.0000
+   -0.7071   -0.7071    0.0000    0.6435
+         0         0         0    1.0000
+
+Position [m]:
+    0.3595   -0.0000    0.6435
+
+Rotation matrix:
+   -0.0000   -0.0000   -1.0000
+    0.7071   -0.7071   -0.0000
+   -0.7071   -0.7071    0.0000
+
+
+Task start joint configuration:
+    0.0470   -0.6876   -0.0996   -2.4321   -0.0206    1.6376    0.8389    0.0400    0.0400
+
+panda_hand transform:
+    0.9910   -0.0795   -0.1077    0.3316
+   -0.0750   -0.9961    0.0455   -0.0243
+   -0.1109   -0.0370   -0.9931    0.5274
+         0         0         0    1.0000
+
+Position [m]:
+    0.3316   -0.0243    0.5274
+
+Rotation matrix:
+    0.9910   -0.0795   -0.1077
+   -0.0750   -0.9961    0.0455
+   -0.1109   -0.0370   -0.9931
+
+End-effector: panda_hand. Run validateProject before training.

@@ -1,0 +1,4 @@
+stage,startStep,maxTargetSpeed,seed,promotionSuccessRate
+1,0,0,2029,NaN
+2,9200,0.003,2029,0.8
+3,15200,0.01,2029,1
