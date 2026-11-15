@@ -32,6 +32,7 @@ styles.add(ParagraphStyle("HeaderCell", parent=styles["Cell"], fontName="Helveti
 styles.add(ParagraphStyle("Caption", parent=styles["Cell"], alignment=TA_CENTER,
                           textColor=TEAL, spaceBefore=4, spaceAfter=10))
 styles.add(ParagraphStyle("TableNote", parent=styles["Cell"], spaceBefore=6))
+styles.add(ParagraphStyle("TableTitle", parent=styles["Cell"], spaceAfter=4))
 styles.add(ParagraphStyle("ContentsEntry", parent=styles["Text"], spaceAfter=0))
 styles.add(ParagraphStyle("ContentsPage", parent=styles["ContentsEntry"],
                           alignment=TA_RIGHT, textColor=TEAL))
@@ -41,7 +42,20 @@ def paragraph(text, style="Text"):
     return Paragraph(text, styles[style])
 
 
-def table(rows, widths):
+TABLE_ENTRIES = [
+    ("table-kinematics", "Table 1. Base-to-hand forward kinematics", 2),
+    ("table-observations", "Table 2. Observation entries and purposes", 3),
+    ("table-reward", "Table 3. Reward terms and purposes", 3),
+    ("table-work", "Table 4. Work breakdown through Progress 2", 4),
+]
+
+
+def table_title(index, note=""):
+    key, title, _ = TABLE_ENTRIES[index]
+    return paragraph(f'<a name="{key}"/>{title}{note}.', "TableTitle")
+
+
+def table(rows, widths, padding=7):
     cells = [[paragraph(value, "HeaderCell" if index == 0 else "Cell")
               for value in row] for index, row in enumerate(rows)]
     widths = [CONTENT_WIDTH * width / sum(widths) for width in widths]
@@ -51,8 +65,8 @@ def table(rows, widths):
         ("ROWBACKGROUNDS", (0, 1), (-1, -1), [PALE, colors.white]),
         ("LINEBELOW", (0, -1), (-1, -1), 0.65, RULE),
         ("VALIGN", (0, 0), (-1, -1), "TOP"),
-        ("TOPPADDING", (0, 0), (-1, -1), 7),
-        ("BOTTOMPADDING", (0, 0), (-1, -1), 7),
+        ("TOPPADDING", (0, 0), (-1, -1), padding),
+        ("BOTTOMPADDING", (0, 0), (-1, -1), padding),
     ]))
     return result
 
@@ -113,6 +127,8 @@ story = [
     ]),
     paragraph("List of Figures", "Section"),
     page_links([("panda-poses", "Figure 1. Panda configurations exported directly from MATLAB", 2)]),
+    paragraph("List of Tables", "Section"),
+    page_links(TABLE_ENTRIES),
     PageBreak(),
     paragraph('<a name="robot"/>1. Robot setup and forward kinematics', "TitlePage"),
     paragraph("The MATLAB Robotics System Toolbox model is loaded with "
@@ -126,7 +142,7 @@ story = [
     paragraph("The toolbox default home pose serves as a forward-kinematics reference. "
               "MATLAB detects self-collision there, so task starts are sampled near the "
               "collision-free starter ready pose. The start shown uses validation seed 6029."),
-    paragraph("Table 1. Base-to-hand forward kinematics (rounded to four decimals)."),
+    table_title(0, " (rounded to four decimals)"),
     table([
         ["Pose", "Arm joints q1 to q7 (rad)", "Hand position (m)", "Self-collision"],
         ["Default home", "0, 0, 0, -1.5708, 0, 0, 0", "(0.3595, 0, 0.6435)", "Detected"],
@@ -144,6 +160,7 @@ story = [
     paragraph("The arm tracks a straight-line target at constant velocity with speed up to "
               "0.01 m/s. The kinematic simulation advances in 0.05 s steps for up to 400 steps "
               "(20 s). The task has no obstacles or orientation constraint."),
+    table_title(1),
     table([
         ["Observation entries", "Dim.", "Purpose"],
         ["Arm joint angles", "7", "Identify the arm configuration and inform safe motion near joint limits."],
@@ -152,7 +169,7 @@ story = [
         ["Target position minus hand position", "3", "Provide the direction and distance of the current tracking error."],
         ["Previous applied joint increments", "7", "Expose the history needed to assess changes between actions."],
         ["Remaining fraction of the episode", "1", "Represent the finite horizon and proximity to the final scoring window."],
-    ], [187, 41, 270]),
+    ], [187, 41, 270], padding=5),
     paragraph("Action and reset", "Section"),
     paragraph("The deterministic policy outputs seven joint increments in radians. Each is "
               "clipped to [-0.01, 0.01] before applying it. Reset samples a valid pose near "
@@ -163,6 +180,7 @@ story = [
     paragraph("Reward and termination", "Section"),
     paragraph("For tracking error e in metres, define c(e) = (50e)/(1 + 50e). The valid-step "
               "reward combines the following terms."),
+    table_title(2),
     table([
         ["Term", "Purpose"],
         ["-c(e)", "Penalizes hand-to-target distance and bounds the tracking cost."],
@@ -170,7 +188,7 @@ story = [
         ["-0.01 sum(((a - a<sub>prev</sub>)/0.01)<super>2</super>)",
          "Discourages abrupt changes in joint increments."],
         ["-0.01 near a joint limit", "Discourages states within 0.1 rad of a limit."],
-    ], [235, 263]),
+    ], [235, 263], padding=5),
     paragraph("A proposed joint-limit or self-collision violation is rejected, gives reward "
               "-250, and ends the episode as a failure. A valid episode ends at step 400 and "
               "succeeds only if every error sample in its final 100 steps is at most 0.02 m."),
@@ -194,6 +212,7 @@ story = [
               "(300,000 environment steps each), and two 128-unit ReLU hidden layers per "
               "actor and critic. Inverse kinematics is reserved for the separate baseline."),
     paragraph('<a name="work-plan"/>4. Work breakdown through Progress 2', "Section"),
+    table_title(3),
     table([
         ["Owner", "Progress 1 contribution", "Progress 2 deliverable"],
         ["Yousef Mohamed gharib<br/>23P0159", "Robot model, end-effector frame and forward kinematics",
