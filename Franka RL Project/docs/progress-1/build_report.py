@@ -58,14 +58,18 @@ def table(rows, widths):
 
 
 def pose_figure():
-    column_width = CONTENT_WIDTH / 2
-    images = [Image(str(ROOT / f"matlab_panda_pose_{index}.png"),
-                    width=column_width - 8, height=171,
-                    kind="proportional") for index in (1, 2)]
-    result = Table([images, [paragraph("A. Starter ready pose", "Caption"),
-                             paragraph("B. Sampled task-start pose", "Caption")]],
-                   colWidths=[column_width] * 2, hAlign="LEFT")
+    poses = [
+        ("matlab_panda_home.png", "A. Default home pose<br/>Self-collision detected"),
+        ("matlab_panda_pose_1.png", "B. Starter ready pose<br/>Collision-free"),
+        ("matlab_panda_pose_2.png", "C. Sampled task-start pose<br/>Collision-free"),
+    ]
+    column_width = CONTENT_WIDTH / len(poses)
+    images = [Image(str(ROOT / filename), width=column_width - 8, height=136,
+                    kind="proportional") for filename, _ in poses]
+    captions = [paragraph(caption, "Caption") for _, caption in poses]
+    result = Table([images, captions], colWidths=[column_width] * len(poses), hAlign="LEFT")
     result.setStyle(TableStyle([("ALIGN", (0, 0), (-1, 0), "CENTER"),
+                                ("VALIGN", (0, 0), (-1, -1), "TOP"),
                                 ("LEFTPADDING", (0, 0), (-1, -1), 4),
                                 ("RIGHTPADDING", (0, 0), (-1, -1), 4)]))
     return result
@@ -116,10 +120,10 @@ story = [
               "Position is measured at the origin of the <b>panda_hand</b> frame relative "
               "to the robot base, using the translation column of its forward-kinematics transform."),
     pose_figure(),
-    paragraph("Figure 1. Two collision-free Panda poses exported directly from MATLAB.", "Caption"),
-    paragraph("The toolbox default home pose is included as a forward-kinematics reference. "
-              "The collision check flags it, so the demonstration displays the starter ready "
-              "pose alongside the sampled task start. The sampled start uses validation seed 6029."),
+    paragraph("Figure 1. Panda configurations exported directly from MATLAB.", "Caption"),
+    paragraph("The toolbox default home pose serves as a forward-kinematics reference. "
+              "MATLAB detects self-collision there, so task starts are sampled near the "
+              "collision-free starter ready pose. The start shown uses validation seed 6029."),
     paragraph("Table 1. Base-to-hand forward kinematics (rounded to four decimals)."),
     table([
         ["Pose", "Arm joints q1 to q7 (rad)", "Hand position (m)", "Self-collision"],
