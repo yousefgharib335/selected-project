@@ -75,16 +75,10 @@ def pose_figure():
     return result
 
 
-def contents():
-    sections = [
-        ("robot", "1. Robot setup and forward kinematics", 2),
-        ("formulation", "2. Reinforcement learning formulation", 3),
-        ("algorithms", "3. Chosen learning algorithms", 4),
-        ("work-plan", "4. Work breakdown through Progress 2", 4),
-    ]
+def page_links(entries):
     rows = [[paragraph(f'<link href="#{key}">{label}</link>', "ContentsEntry"),
              paragraph(f'<link href="#{key}">{page}</link>', "ContentsPage")]
-            for key, label, page in sections]
+            for key, label, page in entries]
     result = Table(rows, colWidths=[CONTENT_WIDTH - 34, 34], hAlign="LEFT")
     result.setStyle(TableStyle([
         ("LEFTPADDING", (0, 0), (-1, -1), 0),
@@ -111,7 +105,14 @@ story = [
     paragraph("Franka Panda<br/>Moving-Target Tracking", "TitlePage"),
     paragraph("<b>Progress 1</b> &nbsp;|&nbsp; Robot setup and reinforcement learning formulation"),
     paragraph("Table of contents", "Section"),
-    contents(),
+    page_links([
+        ("robot", "1. Robot setup and forward kinematics", 2),
+        ("formulation", "2. Reinforcement learning formulation", 3),
+        ("algorithms", "3. Chosen learning algorithms", 4),
+        ("work-plan", "4. Work breakdown through Progress 2", 4),
+    ]),
+    paragraph("List of Figures", "Section"),
+    page_links([("panda-poses", "Figure 1. Panda configurations exported directly from MATLAB", 2)]),
     PageBreak(),
     paragraph('<a name="robot"/>1. Robot setup and forward kinematics', "TitlePage"),
     paragraph("The MATLAB Robotics System Toolbox model is loaded with "
@@ -120,7 +121,8 @@ story = [
               "Position is measured at the origin of the <b>panda_hand</b> frame relative "
               "to the robot base, using the translation column of its forward-kinematics transform."),
     pose_figure(),
-    paragraph("Figure 1. Panda configurations exported directly from MATLAB.", "Caption"),
+    paragraph('<a name="panda-poses"/>Figure 1. Panda configurations exported directly from MATLAB.',
+              "Caption"),
     paragraph("The toolbox default home pose serves as a forward-kinematics reference. "
               "MATLAB detects self-collision there, so task starts are sampled near the "
               "collision-free starter ready pose. The start shown uses validation seed 6029."),
