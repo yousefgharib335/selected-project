@@ -2,7 +2,7 @@
 from pathlib import Path
 
 from reportlab.lib import colors
-from reportlab.lib.enums import TA_CENTER, TA_RIGHT
+from reportlab.lib.enums import TA_CENTER, TA_JUSTIFY, TA_LEFT, TA_RIGHT
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
 from reportlab.platypus import Image, PageBreak, Paragraph, SimpleDocTemplate, Table, TableStyle
@@ -24,16 +24,16 @@ styles.add(ParagraphStyle("TitlePage", fontName="Helvetica-Bold", fontSize=25,
 styles.add(ParagraphStyle("Section", fontName="Helvetica-Bold", fontSize=13,
                           leading=16, textColor=TEAL, spaceBefore=12, spaceAfter=6))
 styles.add(ParagraphStyle("Text", fontName="Helvetica", fontSize=10.5, leading=15,
-                          textColor=INK, spaceAfter=7))
+                          alignment=TA_JUSTIFY, textColor=INK, spaceAfter=7))
 styles.add(ParagraphStyle("Cell", parent=styles["Text"], fontSize=9.2, leading=12,
-                          spaceAfter=0))
+                          alignment=TA_LEFT, spaceAfter=0))
 styles.add(ParagraphStyle("HeaderCell", parent=styles["Cell"], fontName="Helvetica-Bold",
                           textColor=colors.white))
 styles.add(ParagraphStyle("Caption", parent=styles["Cell"], alignment=TA_CENTER,
                           textColor=TEAL, spaceBefore=4, spaceAfter=10))
 styles.add(ParagraphStyle("TableNote", parent=styles["Cell"], spaceBefore=6))
 styles.add(ParagraphStyle("TableTitle", parent=styles["Cell"], spaceAfter=4))
-styles.add(ParagraphStyle("ContentsEntry", parent=styles["Text"], spaceAfter=0))
+styles.add(ParagraphStyle("ContentsEntry", parent=styles["Text"], alignment=TA_LEFT, spaceAfter=0))
 styles.add(ParagraphStyle("ContentsPage", parent=styles["ContentsEntry"],
                           alignment=TA_RIGHT, textColor=TEAL))
 
