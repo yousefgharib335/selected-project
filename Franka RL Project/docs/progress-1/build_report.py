@@ -225,6 +225,7 @@ story = [
          "Plots of reward and termination on two hand-built action sequences"],
         ["Aya allah muhamed<br/>2200627", "TD3/DDPG rationale and report integration",
          "30-case random-policy baseline with success rate and episode returns"],
+        ["Menna Hatem<br/>23P0022", "Pending confirmation", "Pending confirmation"],
     ], [138, 165, 195]),
 ]
 
