@@ -46,7 +46,7 @@ TABLE_ENTRIES = [
     ("table-kinematics", "Table 1. Base-to-hand forward kinematics", 2),
     ("table-observations", "Table 2. Observation entries and purposes", 3),
     ("table-reward", "Table 3. Reward terms and purposes", 3),
-    ("table-work", "Table 4. Work breakdown through Progress 2", 4),
+    ("table-work", "Table 4. Work breakdown by project milestone", 5),
 ]
 
 
@@ -123,7 +123,7 @@ story = [
         ("robot", "1. Robot setup and forward kinematics", 2),
         ("formulation", "2. Reinforcement learning formulation", 3),
         ("algorithms", "3. Chosen learning algorithms", 4),
-        ("work-plan", "4. Work breakdown through Progress 2", 4),
+        ("work-plan", "4. Project work breakdown", 5),
     ]),
     paragraph("List of Figures", "Section"),
     page_links([("panda-poses", "Figure 1. Panda configurations exported directly from MATLAB", 2)]),
@@ -193,7 +193,7 @@ story = [
               "-250, and ends the episode as a failure. A valid episode ends at step 400 and "
               "succeeds only if every error sample in its final 100 steps is at most 0.02 m."),
     PageBreak(),
-    paragraph("METHOD SELECTION AND WORK PLAN", "Kicker"),
+    paragraph("METHOD SELECTION", "Kicker"),
     paragraph('<a name="algorithms"/>3. Chosen learning algorithms', "TitlePage"),
     paragraph("<b>TD3.</b> Twin Delayed Deep Deterministic Policy Gradient maps the 24 observations "
               "directly to seven continuous joint increments. It learns off-policy from replay "
@@ -211,23 +211,38 @@ story = [
     paragraph("Both methods use the same task, reward, training seed (2029), budget "
               "(300,000 environment steps each), and two 128-unit ReLU hidden layers per "
               "actor and critic. Inverse kinematics is reserved for the separate baseline."),
-    paragraph('<a name="work-plan"/>4. Work breakdown through Progress 2', "Section"),
+    PageBreak(),
+    paragraph('<a name="work-plan"/>4. Project work breakdown', "TitlePage"),
     table_title(3),
     table([
-        ["Owner", "Progress 1 contribution", "Progress 2 deliverable"],
+        ["Owner", "Progress 1<br/>Robot setup and formulation",
+         "Progress 2<br/>Environment validation", "Progress 3<br/>First trained agent",
+         "Progress 4<br/>Controller comparison"],
         ["Yousef Mohamed gharib<br/>23P0159", "Robot model, end-effector frame and forward kinematics",
-         "Integrate the step and reset functions in rlFunctionEnv and carry task state through LoggedSignals"],
-        ["Basmala Helmy Lotfy Mohamed<br/>23P0359", "Observations and target/reset formulation",
-         "Implement reset sampling and check that target paths stay inside the workspace"],
-        ["Yousef Ahmed Elbaz<br/>23P0032", "Actions, constraints and termination design",
-         "Implement step updates, increment clipping and termination on constraint violations"],
-        ["Mostafa Elmoriah<br/>23p0036", "Reward and success criteria",
-         "Plots of reward and termination on two hand-built action sequences"],
+         "Integrate step and reset in rlFunctionEnv using LoggedSignals",
+         "Train TD3 for 300,000 steps and record curriculum settings, seed and stage step counts",
+         "Freeze both trained policies and run the three controllers on the same 30 unseen cases"],
+        ["Basmala Helmy Lotfy Mohamed<br/>23P0359", "Target motion, observations and reset formulation",
+         "Implement reset sampling and verify target paths stay inside the workspace",
+         "Evaluate the frozen TD3 policy on 10 tuning-seed cases",
+         "Generate and document the 30 reserved cases with the evaluation seed"],
+        ["Yousef Ahmed Elbaz<br/>23P0032", "Actions, constraints and termination",
+         "Implement step updates and test increment clipping and violation termination",
+         "Diagnose joint-limit and collision failures and record supporting evidence",
+         "Adapt the IK controller and verify that it uses the same joint increment limit"],
+        ["Mostafa Elmoriah<br/>23p0036", "Reward terms and success criteria",
+         "Plot reward and termination for two hand-built action sequences",
+         "Plot learning curves by curriculum stage and analyze tracking failures",
+         "Summarize tracking error, violations and smoothness across controllers"],
         ["Aya allah muhamed<br/>2200627", "TD3 and DDPG selection and justification",
-         "30-case random-policy baseline with success rate and episode returns"],
+         "Run the 30-case random-policy baseline and record success rate and returns",
+         "Review TD3 failure modes and document the evidence for training adjustments",
+         "Train DDPG with the same reward, budget and seed. Draft the algorithm comparison"],
         ["Menna Hatem<br/>23P0022", "Milestone traceability and report integration",
-         "Verify and document at least 20 valid, collision-free resets and compile validation evidence"],
-    ], [138, 165, 195]),
+         "Verify and document at least 20 valid, collision-free resets",
+         "Compile frozen-policy results, training figures and failure evidence",
+         "Compile the final report, including per-case results, timing, hardware and the better RL policy versus IK"],
+    ], [104, 90, 99, 101, 104], padding=6),
 ]
 
 
