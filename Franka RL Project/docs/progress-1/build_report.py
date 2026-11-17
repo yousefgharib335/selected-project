@@ -216,16 +216,17 @@ story = [
     table([
         ["Owner", "Progress 1 contribution", "Progress 2 deliverable"],
         ["Yousef Mohamed gharib<br/>23P0159", "Robot model, end-effector frame and forward kinematics",
-         "Evidence for at least 20 valid, collision-free resets"],
+         "Integrate the step and reset functions in rlFunctionEnv and carry task state through LoggedSignals"],
         ["Basmala Helmy Lotfy Mohamed<br/>23P0359", "Observations and target/reset formulation",
-         "Reset implementation and workspace checks"],
+         "Implement reset sampling and check that target paths stay inside the workspace"],
         ["Yousef Ahmed Elbaz<br/>23P0032", "Actions, constraints and termination design",
-         "Step implementation, increment clipping and violation tests"],
+         "Implement step updates, increment clipping and termination on constraint violations"],
         ["Mostafa Elmoriah<br/>23p0036", "Reward and success criteria",
          "Plots of reward and termination on two hand-built action sequences"],
-        ["Aya allah muhamed<br/>2200627", "TD3/DDPG rationale and report integration",
+        ["Aya allah muhamed<br/>2200627", "TD3 and DDPG selection and justification",
          "30-case random-policy baseline with success rate and episode returns"],
-        ["Menna Hatem<br/>23P0022", "Pending confirmation", "Pending confirmation"],
+        ["Menna Hatem<br/>23P0022", "Milestone traceability and report integration",
+         "Verify and document at least 20 valid, collision-free resets and compile validation evidence"],
     ], [138, 165, 195]),
 ]
 
