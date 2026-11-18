@@ -26,6 +26,6 @@ MATLAB loads the Panda model from Robotics System Toolbox. All project paths are
 Use `trainTD3` and `trainDDPG` for the full 300,000-step runs. After both finish, run `plotLearningCurves` and `evaluateComparison`. New MATLAB results are saved locally in `Franka RL Project/results/current`, which Git ignores. Saved calibration and validation records are included for reference.
 
 - [MATLAB project guide](Franka%20RL%20Project/README.md)
-- [Progress 1 report](Franka%20RL%20Project/docs/progress-1/Progress_1_Franka_Panda.pdf)
+- [Progress 1 report](Progress_1_Franka_Panda_Final_Progress2.pdf)
 - [Assignment brief](RL%20Franka%20Panda%20Project%20Description.pdf)
 - [Progress milestones](Progress.pdf)
