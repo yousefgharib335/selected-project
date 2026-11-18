@@ -5,7 +5,7 @@ from reportlab.lib import colors
 from reportlab.lib.enums import TA_CENTER, TA_JUSTIFY, TA_LEFT, TA_RIGHT
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
-from reportlab.platypus import Image, PageBreak, Paragraph, SimpleDocTemplate, Table, TableStyle
+from reportlab.platypus import Image, PageBreak, Paragraph, SimpleDocTemplate, Spacer, Table, TableStyle
 
 
 ROOT = Path(__file__).resolve().parent
@@ -36,6 +36,10 @@ styles.add(ParagraphStyle("TableTitle", parent=styles["Cell"], spaceAfter=4))
 styles.add(ParagraphStyle("ContentsEntry", parent=styles["Text"], alignment=TA_LEFT, spaceAfter=0))
 styles.add(ParagraphStyle("ContentsPage", parent=styles["ContentsEntry"],
                           alignment=TA_RIGHT, textColor=TEAL))
+styles.add(ParagraphStyle("CoverTitle", parent=styles["TitlePage"],
+                          fontSize=38, leading=43, spaceAfter=16))
+styles.add(ParagraphStyle("CoverSubtitle", parent=styles["ContentsEntry"],
+                          fontSize=13, leading=18))
 
 
 def paragraph(text, style="Text"):
@@ -43,11 +47,23 @@ def paragraph(text, style="Text"):
 
 
 TABLE_ENTRIES = [
-    ("table-kinematics", "Table 1. Base-to-hand forward kinematics", 2),
-    ("table-observations", "Table 2. Observation entries and purposes", 3),
-    ("table-reward", "Table 3. Reward terms and purposes", 3),
-    ("table-work", "Table 4. Work breakdown by project milestone", 5),
+    ("table-kinematics", "Table 1. Base-to-hand forward kinematics", 3),
+    ("table-observations", "Table 2. Observation entries and purposes", 4),
+    ("table-reward", "Table 3. Reward terms and purposes", 4),
+    ("table-work", "Table 4. Work breakdown by project milestone", 6),
 ]
+TEAM = [
+    ("Yousef Mohamed gharib", "23P0159"),
+    ("Basmala Helmy Lotfy Mohamed", "23P0359"),
+    ("Yousef Ahmed Elbaz", "23P0032"),
+    ("Mostafa Elmoriah", "23p0036"),
+    ("Aya allah muhamed", "2200627"),
+    ("Menna Hatem", "23P0022"),
+]
+
+
+def team_owner(index):
+    return "<br/>".join(TEAM[index])
 
 
 def table_title(index, note=""):
@@ -116,17 +132,25 @@ def footer(canvas, document):
 
 story = [
     paragraph("MCT464  /  SELECTED TOPICS IN ROBOTICS &amp; AI", "Kicker"),
-    paragraph("Franka Panda<br/>Moving-Target Tracking", "TitlePage"),
-    paragraph("<b>Progress 1</b> &nbsp;|&nbsp; Robot setup and reinforcement learning formulation"),
+    paragraph("FALL 2026", "Kicker"),
+    Spacer(1, 91),
+    paragraph("PROGRESS 1 REPORT", "Kicker"),
+    paragraph("Franka Panda<br/>Moving-Target Tracking", "CoverTitle"),
+    paragraph("Robot setup and reinforcement learning formulation", "CoverSubtitle"),
+    Spacer(1, 48),
+    paragraph("Project team", "Section"),
+    table([["Team member", "Student ID"], *TEAM], [360, 127]),
+    PageBreak(),
+    paragraph("Franka Panda Moving-Target Tracking", "Kicker"),
     paragraph("Table of contents", "Section"),
     page_links([
-        ("robot", "1. Robot setup and forward kinematics", 2),
-        ("formulation", "2. Reinforcement learning formulation", 3),
-        ("algorithms", "3. Chosen learning algorithms", 4),
-        ("work-plan", "4. Project work breakdown", 5),
+        ("robot", "1. Robot setup and forward kinematics", 3),
+        ("formulation", "2. Reinforcement learning formulation", 4),
+        ("algorithms", "3. Chosen learning algorithms", 5),
+        ("work-plan", "4. Project work breakdown", 6),
     ]),
     paragraph("List of Figures", "Section"),
-    page_links([("panda-poses", "Figure 1. Panda configurations exported directly from MATLAB", 2)]),
+    page_links([("panda-poses", "Figure 1. Panda configurations exported directly from MATLAB", 3)]),
     paragraph("List of Tables", "Section"),
     page_links(TABLE_ENTRIES),
     PageBreak(),
@@ -218,27 +242,27 @@ story = [
         ["Owner", "Progress 1<br/>Robot setup and formulation",
          "Progress 2<br/>Environment validation", "Progress 3<br/>First trained agent",
          "Progress 4<br/>Controller comparison"],
-        ["Yousef Mohamed gharib<br/>23P0159", "Robot model, end-effector frame and forward kinematics",
+        [team_owner(0), "Robot model, end-effector frame and forward kinematics",
          "Integrate step and reset in rlFunctionEnv using LoggedSignals",
          "Train TD3 for 300,000 steps and record curriculum settings, seed and stage step counts",
          "Freeze both trained policies and run the three controllers on the same 30 unseen cases"],
-        ["Basmala Helmy Lotfy Mohamed<br/>23P0359", "Target motion, observations and reset formulation",
+        [team_owner(1), "Target motion, observations and reset formulation",
          "Implement reset sampling and verify target paths stay inside the workspace",
          "Evaluate the frozen TD3 policy on 10 tuning-seed cases",
          "Generate and document the 30 reserved cases with the evaluation seed"],
-        ["Yousef Ahmed Elbaz<br/>23P0032", "Actions, constraints and termination",
+        [team_owner(2), "Actions, constraints and termination",
          "Implement step updates and test increment clipping and violation termination",
          "Diagnose joint-limit and collision failures and record supporting evidence",
          "Adapt the IK controller and verify that it uses the same joint increment limit"],
-        ["Mostafa Elmoriah<br/>23p0036", "Reward terms and success criteria",
+        [team_owner(3), "Reward terms and success criteria",
          "Plot reward and termination for two hand-built action sequences",
          "Plot learning curves by curriculum stage and analyze tracking failures",
          "Summarize tracking error, violations and smoothness across controllers"],
-        ["Aya allah muhamed<br/>2200627", "TD3 and DDPG selection and justification",
+        [team_owner(4), "TD3 and DDPG selection and justification",
          "Run the 30-case random-policy baseline and record success rate and returns",
          "Review TD3 failure modes and document the evidence for training adjustments",
          "Train DDPG with the same reward, budget and seed. Draft the algorithm comparison"],
-        ["Menna Hatem<br/>23P0022", "Milestone traceability and report integration",
+        [team_owner(5), "Milestone traceability and report integration",
          "Verify and document at least 20 valid, collision-free resets",
          "Compile frozen-policy results, training figures and failure evidence",
          "Compile the final report, including per-case results, timing, hardware and the better RL policy versus IK"],
@@ -250,7 +274,7 @@ def main():
     report = SimpleDocTemplate(str(ROOT / "Progress_1_Franka_Panda.pdf"), pagesize=A4,
                                leftMargin=PAGE_MARGIN, rightMargin=PAGE_MARGIN, topMargin=44,
                                bottomMargin=59, title="Progress 1 | Franka Panda Moving-Target Tracking")
-    report.build(story, onFirstPage=footer, onLaterPages=footer)
+    report.build(story, onLaterPages=footer)
 
 
 if __name__ == "__main__":
